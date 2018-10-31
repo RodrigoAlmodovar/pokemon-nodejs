@@ -25,7 +25,7 @@ podTemplate(
         def repository
         stage ('Build') {
             container ('docker') {
-                repository = "ciberado/pokemon-nodejs"
+                repository = "RodrigoAlmodovar/pokemon-nodejs"
                 sh "docker build -t ${repository}:${commitId} ."
             }
         }
