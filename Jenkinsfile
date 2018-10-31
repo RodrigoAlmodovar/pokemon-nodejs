@@ -34,9 +34,9 @@ podTemplate(
               withCredentials([[
                   $class: 'UsernamePasswordMultiBinding', 
                   credentialsId: 'docker_hub',
-                  usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'
+                  usernameVariable: 'Username', passwordVariable: 'Password'
               ]]) {
-                  sh "docker login -u $USERNAME -p $PASSWORD"
+                  sh "docker login -u $Username -p $Password"
                   sh "docker push ${repository}:${commitId}"
               }
             }
